@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set  
 
 echo "Hello World !!"
 dfadshfklf
