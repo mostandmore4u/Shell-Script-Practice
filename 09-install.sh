@@ -9,8 +9,9 @@ if [ $USERID -ne 0 ]; then
 fi
 
 #echo "I am continuing..."
+
 echo " Installing mySQL"
-dnf install mysql -y
+dnf install mysadfakql -y
 
 if [ $? -ne 0 ]; then
 echo "Installing mySQL is .... FAILED"
