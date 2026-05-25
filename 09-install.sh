@@ -8,4 +8,9 @@ if [ $USERID -ne 0 ]; then
   exit 1
 fi
 
+#echo "I am continuing..."
+echo "I am installing mySQL"
+dnf install mysqldafhadhf -y
+
 echo "I am continuing..."
+echo "I am still continuing..."
