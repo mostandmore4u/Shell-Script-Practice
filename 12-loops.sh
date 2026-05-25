@@ -21,7 +21,8 @@ VALIDATE(){
     fi
 }
 
+
 for package in $@
 do
-     "Instaling $package"
+     "Installing $package"
 done
