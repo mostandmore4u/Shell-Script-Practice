@@ -3,6 +3,7 @@
 USERID=$(id -u)
 LOGS_DIR=/var/log/shell-script
 LOGS_FILE="$LOGS_DIR/$0.log" 
+TIMESTAMP=$(date "=%Y-%m-%d %H-%M-%S")
 
 # Check root access or not
 if [ $USERID -ne 0 ]; then
@@ -14,10 +15,10 @@ fi
 
 VALIDATE(){
     if [ $2 -ne 0 ]; then
-        echo "Installing $1 is ... FAILED"
+        echo "$TIMESTAMP [ERROR]Installing $1 is ... FAILED" | tee -a $LOGS_FILE
         exit 1
     else
-        echo "Installing $1 is ... SUCCESS"
+        echo "$TIMESTAMP [INFO] Installing $1 is ... SUCCESS" | tee -a $LOGS_FILE
     fi
 }
 
