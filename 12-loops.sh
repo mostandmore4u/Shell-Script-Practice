@@ -1,6 +1,8 @@
 #!/bin/bash
 
 USERID=$(id -u)
+LOGS_DIR=/var/log/shell-script
+LOGS_FILE="$LOGS_DIR/$0.log" 
 
 # Check root access or not
 if [ $USERID -ne 0 ]; then
